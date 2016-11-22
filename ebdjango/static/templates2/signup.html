@@ -1,0 +1,35 @@
+		{% include 'templates/header.html' %}
+
+
+  <body>
+    	<div style="background-color: #EDFEDF" align='center'>
+		
+			<div align='center' style="width: 50%; height: 50%; float:left; vertical-align: center">
+				<p>login below:</p>
+	    		<p>username: 	<input type="text" name="username"></p>
+	    		<p>OR</p>
+	    		<p>email:		<input type="text" name="email"></p>
+	    		<p>password:	<input type="password" name="password"></p>
+
+	    		<p>Or, you can login with Google Sign In!</p>
+		   		<div id="sign_in_button"  class="g-signin2" align='center' data-onsuccess="onSignIn" data-theme="dark"></div>
+
+
+			</div>
+
+
+
+	    	<div align='center' style="width: 50%; height: 50%; float:right; vertical-align: center">
+	    		<p>Create an account below: </p>
+	    		<p>username: 	<input type="text" name="username"></p>
+	    		<p>OR</p>
+	    		<p>email:		<input type="text" name="email"></p>
+	    		<p>password:	<input type="password" name="password"></p>
+
+	    		<p>Or, you can sign up with Google Sign In!</p>
+		   		<div id="sign_in_button"  class="g-signin2" align='center' data-onsuccess="onSignIn" data-theme="dark"></div>
+
+	    	</div>
+	    </div>
+
+  		{% include 'templates/footer.html' %}

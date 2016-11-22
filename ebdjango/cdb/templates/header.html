@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>My WebApp</title>
+
+		<meta name="google-signin-scope" content="profile email">
+		<meta name="google-signin-client_id" content="151627707413-qb7u0g8d3cn5ccm3115tatuivst44l5j.apps.googleusercontent.com">
+
+    	<script src="https://apis.google.com/js/platform.js" async defer></script>
+		<link rel="stylesheet" type="text/css" href="../static/css/mystyle.css">
+		<script src="../static/js/signinScript.js" async defer></script>
+
+
+
+	</head>
+	<body>
+
+		<div class="header_bar" align='right'>
+				<div style="margin-bottom: 5px;"> 
+				<a class="header_bar_item" href="../cdb/" align='right' style="text-decoration:none; color:white">Home</a>
+				<a class="header_bar_item" href="../cdb/signup" align='right' style="text-decoration:none; color:white; vertical-align: center">Sign Up/Login</a>
+				</div>
+				<p class="header_bar_item" id="logged_in" style="display:none" align='right'></p>
+				<a class="header_bar_item" id="signout_button" style="display:none" align='right' href="#" onclick="signOut();">Sign out</a>
+
+	   	</div>	
+
+	   	<h1 align='center' style="margin-top: 30px;">Cancer Database</h1>

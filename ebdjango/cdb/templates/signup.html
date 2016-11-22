@@ -1,0 +1,49 @@
+		{% include 'header.html' %}
+
+
+  <body>
+    	<div style="background-color: #EDFEDF" align='center'>
+		
+			<div align='center' style="width: 50%; height: 50%; float:left; vertical-align: center">
+				<form action="/cdb/auth/" method="post">{% csrf_token %}
+				<label for="username">User name:</label>
+				<input type="text" name="username" value="" id="username">
+				<label for="password">Password:</label>
+				<input type="password" name="password" value="" id="password">
+				<input type="submit" value="login">
+			</form>
+
+	    		<p>Or, you can login with Google Sign In!</p>
+		   		<div id="sign_in_button"  class="g-signin2" align='center' data-onsuccess="onSignIn" data-theme="dark"></div>
+
+
+			</div>
+
+
+
+	    	<div align='center' style="width: 50%; height: 50%; float:right; vertical-align: center">
+	    		<p>Create an account below: </p>
+	    		
+	    		<form action="/cdb/register/" method="post"> {% csrf_token %}
+					{% for field in form %}
+					<div id="field" align="center">
+						{{ field.label_tag }} 
+						<p></p>
+						{{ field }}
+						<p></p>
+					</div>
+					{% endfor %} 
+
+					<div id="field" align="center">
+						<input type="submit" value="Register"/>
+					</div>		
+				</form>
+
+
+	    		<p>Or, you can sign up with Google Sign In!</p>
+		   		<div id="sign_in_button"  class="g-signin2" align='center' data-onsuccess="onSignIn" data-theme="dark"></div>
+
+	    	</div>
+	    </div>
+
+  		{% include 'footer.html' %}
